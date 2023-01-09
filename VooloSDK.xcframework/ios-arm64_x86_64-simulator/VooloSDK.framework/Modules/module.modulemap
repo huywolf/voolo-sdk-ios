@@ -1,0 +1,11 @@
+framework module VooloSDK {
+  umbrella header "VooloSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module VooloSDK.Swift {
+    header "VooloSDK-Swift.h"
+    requires objc
+}
