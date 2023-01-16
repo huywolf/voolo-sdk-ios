@@ -246,11 +246,11 @@
 		</data>
 		<key>Modules/VooloSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		b7pUb+86PZ/xf1YX4Y1OnbPbvNg=
+		C6AJBc5zU2EUAn1cxYySRqiyljc=
 		</data>
 		<key>Modules/VooloSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		22yi4Q4s6GCV2Xk0Sj9RfWbj6OM=
+		e203KmduQfEVjY9WOkDAs0AH7h0=
 		</data>
 		<key>Modules/VooloSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -258,19 +258,19 @@
 		</data>
 		<key>Modules/VooloSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		22yi4Q4s6GCV2Xk0Sj9RfWbj6OM=
+		e203KmduQfEVjY9WOkDAs0AH7h0=
 		</data>
 		<key>Modules/VooloSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		63CDQ/dVFReIR5DTIcBYx2aZUSc=
+		Xc48GA2p9/FaJkqd2+fYWUCyPlg=
 		</data>
 		<key>Modules/VooloSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		b7pUb+86PZ/xf1YX4Y1OnbPbvNg=
+		C6AJBc5zU2EUAn1cxYySRqiyljc=
 		</data>
 		<key>Modules/VooloSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		3rUFn7mV0lW+YdFPEed25uCp+N4=
+		b8ZGQKc6Cz2w1SRscn8JigclRf4=
 		</data>
 		<key>Modules/VooloSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -278,11 +278,11 @@
 		</data>
 		<key>Modules/VooloSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		3rUFn7mV0lW+YdFPEed25uCp+N4=
+		b8ZGQKc6Cz2w1SRscn8JigclRf4=
 		</data>
 		<key>Modules/VooloSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		fqxERQb+R6lQ8lnTGIGF9o6s/hc=
+		GaLngiiOWkYeC9QxsPr/TUm468s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -708,14 +708,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zQt/YDoun604qe/zDjke7dIWopzax3+x4dIcXwsiva8=
+			+lbHZYpJOFrTyZcjSCisTQtZnBSvtNieTRhA5bmzqgo=
 			</data>
 		</dict>
 		<key>Modules/VooloSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EBT3py0XgpiVq/4aBosF8T2I0hF/rOoMq/pf/YmmZbU=
+			Vn2md2d07oowpK92dyvCJl7GxGGuBTgFpt++uus201U=
 			</data>
 		</dict>
 		<key>Modules/VooloSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -729,28 +729,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EBT3py0XgpiVq/4aBosF8T2I0hF/rOoMq/pf/YmmZbU=
+			Vn2md2d07oowpK92dyvCJl7GxGGuBTgFpt++uus201U=
 			</data>
 		</dict>
 		<key>Modules/VooloSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+v+po/jdAzh5ncZaQ/kIlNoYS3ItSNmeQaJ23ubhDUo=
+			oNFNRNbj8trV28MjQ2uIDD/XLWOiVoiI8RexB79wyw8=
 			</data>
 		</dict>
 		<key>Modules/VooloSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zQt/YDoun604qe/zDjke7dIWopzax3+x4dIcXwsiva8=
+			+lbHZYpJOFrTyZcjSCisTQtZnBSvtNieTRhA5bmzqgo=
 			</data>
 		</dict>
 		<key>Modules/VooloSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yipz8ZYpAyWnLNIQXQdb1rgRwvYvoFhAuctQBmuh5OI=
+			IGsafoEtp5qlB+A8QEU33NiNfbwfHijoQ2BScBIPWYY=
 			</data>
 		</dict>
 		<key>Modules/VooloSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -764,14 +764,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yipz8ZYpAyWnLNIQXQdb1rgRwvYvoFhAuctQBmuh5OI=
+			IGsafoEtp5qlB+A8QEU33NiNfbwfHijoQ2BScBIPWYY=
 			</data>
 		</dict>
 		<key>Modules/VooloSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			o95i36qISG5G5j8aOBzm2hKr/fI4SthwJHXhVdSiJ4w=
+			I8ORzN7H/yMDw2p45+CPRnps2jj8NbXgjDgt/neYHYw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

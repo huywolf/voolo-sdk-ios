@@ -12,16 +12,17 @@ import _StringProcessing
 public struct VPersonal : Swift.Codable {
   public let id: Swift.String?
   public var name: Swift.String?, sex: Swift.String?, phone: Swift.String?, birthday: Swift.String?
-  public var citizenID: Swift.String?, issueDate: Swift.String?, expirationDate: Swift.String?, city: Swift.String?, district: Swift.String?, ward: Swift.String?, street: Swift.String?
+  public var citizenID: Swift.String?, issueDate: Swift.String?, expirationDate: Swift.String?
   public var personalTitleRef: VooloSDK.VReferenceRelation?
   public var nameRef: Swift.String?, phoneRef: Swift.String?
   public var user: Swift.String?
   public var providers: [VooloSDK.VProvider]?
   public var tenor: VooloSDK.VTenor?
-  public var temCity: VooloSDK.VProvince?
-  public var temDistrict: VooloSDK.VDistrict?
-  public var temWard: VooloSDK.VWard?
-  public var temStreet: Swift.String?
+  public var ocrAddress: Swift.String?
+  public var city: VooloSDK.VProvince?, temCity: VooloSDK.VProvince?
+  public var district: VooloSDK.VDistrict?, temDistrict: VooloSDK.VDistrict?
+  public var ward: VooloSDK.VWard?, temWard: VooloSDK.VWard?
+  public var street: Swift.String?, temStreet: Swift.String?
   public var selfieImgBase64: Swift.String?
   public var frontIdCardImgBase64: Swift.String?
   public var backIdCardImgBase64: Swift.String?
@@ -120,6 +121,7 @@ public struct Voolo {
   public func getAllProvince(completion: @escaping (Swift.Result<[VooloSDK.VProvince], VooloSDK.VError>) -> Swift.Void)
   public func getDistrictByProvinceId(provinceId: Swift.String, completion: @escaping (Swift.Result<[VooloSDK.VDistrict], VooloSDK.VError>) -> Swift.Void)
   public func getWardByDistrictId(districtId: Swift.String, completion: @escaping (Swift.Result<[VooloSDK.VWard], VooloSDK.VError>) -> Swift.Void)
+  public func checkInfomationAddress(address: Swift.String, completion: @escaping (Swift.Result<VooloSDK.CheckInfomationAddressData, VooloSDK.VError>) -> Swift.Void)
   public func getAllReferenceRelation(completion: @escaping (Swift.Result<[VooloSDK.VReferenceRelation], VooloSDK.VError>) -> Swift.Void)
   public func checkPhoneExists(phone: Swift.String, completion: @escaping (Swift.Result<VooloSDK.VProcess, VooloSDK.VError>) -> Swift.Void)
   public func login(phone: Swift.String, pin: Swift.String, completion: @escaping (Swift.Result<VooloSDK.VUserInfo, VooloSDK.VError>) -> Swift.Void)
@@ -131,6 +133,7 @@ public struct Voolo {
   public func getESignUrl(phone: Swift.String, completion: @escaping (Swift.Result<(Swift.String), VooloSDK.VError>) -> Swift.Void)
   public func convertImageToBase64(image: UIKit.UIImage?) -> Swift.String?
   public func fecPostIframe(phone: Swift.String, completion: @escaping (Swift.Result<([Swift.String : Any]), VooloSDK.VError>) -> Swift.Void)
+  public func validateDataType(data: Swift.String, dataType: VooloSDK.VValidateDataType) -> VooloSDK.VValidateResponse
 }
 extension VooloSDK.VSnapParams.Document : Swift.Hashable {
   public static func == (a: VooloSDK.VSnapParams.Document, b: VooloSDK.VSnapParams.Document) -> Swift.Bool
@@ -185,6 +188,7 @@ public struct VDistrict : Swift.Codable {
   public let id: Swift.String?
   public let classificationCode: Swift.String?
   public let name: Swift.String?
+  public let nameEn: Swift.String?
   public let parentClassificationCode: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
@@ -275,10 +279,19 @@ public enum VProcess : Swift.String {
     get
   }
 }
+public struct CheckInfomationAddressData : Swift.Codable {
+  public let dataCity: VooloSDK.VProvince?
+  public let dataDistrict: VooloSDK.VDistrict?
+  public let dataWard: VooloSDK.VWard?
+  public let street: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
 public struct VWard : Swift.Codable {
   public let id: Swift.String?
   public let classificationCode: Swift.String?
   public let name: Swift.String?
+  public let nameEn: Swift.String?
   public let parentClassificationCode: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
@@ -329,6 +342,7 @@ public struct VProvince : Swift.Codable {
   public let id: Swift.String?
   public let classificationCode: Swift.String?
   public let name: Swift.String?
+  public let nameEn: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -349,15 +363,29 @@ public struct VProvider : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+public enum VValidateDataType {
+  case phone
+  case pinCode
+  public static func == (a: VooloSDK.VValidateDataType, b: VooloSDK.VValidateDataType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct VValidateResponse {
+  public let success: Swift.Bool
+  public let message: Swift.String
+  public let messageEn: Swift.String
+}
 public struct PostTransactionParams {
-  public let transactionID: Swift.String?, accountNumber: Swift.String?, userID: Swift.String?
-  public let totalAmount: Swift.Int?
-  public let subOrders: [VooloSDK.SubOrder]?
-  public let tenor: Swift.Int?
-  public let acquirerID: Swift.String?
-  public let mid: Swift.String?, mcc: Swift.String?, description: Swift.String?
-  public let orderDate: Swift.String?
-  public init(transactionID: Swift.String?, accountNumber: Swift.String?, userID: Swift.String?, orderDate: Swift.String?, totalAmount: Swift.Int?, subOrders: [VooloSDK.SubOrder]?, tenor: Swift.Int?, acquirerID: Swift.String?, mid: Swift.String?, mcc: Swift.String?, description: Swift.String?)
+  public let sessionID: Swift.String, vendor: Swift.String, accountNumber: Swift.String, userID: Swift.String
+  public let totalAmount: Swift.Int
+  public let subOrders: [VooloSDK.SubOrder]
+  public let tenor: Swift.Int
+  public let acquirerID: Swift.String
+  public let mid: Swift.String, mcc: Swift.String, description: Swift.String
+  public let orderDate: Swift.String
+  public init(sessionID: Swift.String, vendor: Swift.String, accountNumber: Swift.String, userID: Swift.String, orderDate: Swift.String, totalAmount: Swift.Int, subOrders: [VooloSDK.SubOrder], tenor: Swift.Int, acquirerID: Swift.String, mid: Swift.String, mcc: Swift.String, description: Swift.String)
 }
 public struct SubOrder : Swift.Codable {
   public init(subOrderId: Swift.String?, skuID: Swift.String?, categoryID: Swift.String?, quantity: Swift.Int?, amount: Swift.Int?, merchantID: Swift.String?)
@@ -365,7 +393,7 @@ public struct SubOrder : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct VAccountInfo : Swift.Codable {
-  public let transactionID: Swift.String?
+  public let sessionID: Swift.String?
   public let accountNumber: Swift.String?
   public let accountStatus: Swift.String?
   public let otb: Swift.Int?, consumedLimit: Swift.Int?, approveLimit: Swift.Int?
@@ -379,3 +407,5 @@ extension VooloSDK.VProcess : Swift.Hashable {}
 extension VooloSDK.VProcess : Swift.RawRepresentable {}
 extension VooloSDK.AppEnvironement : Swift.Equatable {}
 extension VooloSDK.AppEnvironement : Swift.Hashable {}
+extension VooloSDK.VValidateDataType : Swift.Equatable {}
+extension VooloSDK.VValidateDataType : Swift.Hashable {}

@@ -246,11 +246,11 @@
 		</data>
 		<key>Modules/VooloSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		b7pUb+86PZ/xf1YX4Y1OnbPbvNg=
+		C6AJBc5zU2EUAn1cxYySRqiyljc=
 		</data>
 		<key>Modules/VooloSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		Juft/UgK7Ya+REFl4vFXmvoG/kU=
+		Fbw4XtnJ5sMThoHIoSFvJuEJwqI=
 		</data>
 		<key>Modules/VooloSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -258,11 +258,11 @@
 		</data>
 		<key>Modules/VooloSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Juft/UgK7Ya+REFl4vFXmvoG/kU=
+		Fbw4XtnJ5sMThoHIoSFvJuEJwqI=
 		</data>
 		<key>Modules/VooloSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		4lHNa/z78dR4E5gOr0tGR9n2uX0=
+		VMnUlxqZJxNrawUSgacZYgNuw84=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -688,14 +688,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zQt/YDoun604qe/zDjke7dIWopzax3+x4dIcXwsiva8=
+			+lbHZYpJOFrTyZcjSCisTQtZnBSvtNieTRhA5bmzqgo=
 			</data>
 		</dict>
 		<key>Modules/VooloSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wDPKByVDQHFNhpaDSdxDQy4EWPxBPq4kOOCIlRHManY=
+			RqUdxp1weTW9f8YaS6ir8iuzNULHWzyrGHkkqyq5R30=
 			</data>
 		</dict>
 		<key>Modules/VooloSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -709,14 +709,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wDPKByVDQHFNhpaDSdxDQy4EWPxBPq4kOOCIlRHManY=
+			RqUdxp1weTW9f8YaS6ir8iuzNULHWzyrGHkkqyq5R30=
 			</data>
 		</dict>
 		<key>Modules/VooloSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pYbZyRP6ODjccCnBxLHNVNr0MFROE7lMocKem59dJYA=
+			INSfHtfuvn9mN/GwjETQND/JIU8o9lnRz1Con3+xqIU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
